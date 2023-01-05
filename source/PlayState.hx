@@ -2324,6 +2324,7 @@ class PlayState extends MusicBeatState
 			case 'polus3':
 				curStage = 'polus3';
 
+				/*
 				caShader = new ChromaticAbberation(0);
 				add(caShader);
 				caShader.amount = -0.2;
@@ -2332,7 +2333,7 @@ class PlayState extends MusicBeatState
 				heatwaveShader = new HeatwaveShader();
 				add(heatwaveShader);
 				var filter:ShaderFilter = new ShaderFilter(heatwaveShader.shader);
-				camGame.setFilters([filter, filter2]);
+				camGame.setFilters([filter, filter2]);*/
 
 				//		var sky:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('polus/SkyPolusLol', 'impostor'));
 				//		sky.antialiasing = true;
@@ -3480,11 +3481,12 @@ class PlayState extends MusicBeatState
 				
 			case 'grey':
 
+				/*
 				caShader = new ChromaticAbberation(0);
 				add(caShader);
 				caShader.amount = -0.5;
 				var filter:ShaderFilter = new ShaderFilter(caShader.shader);
-				camGame.setFilters([filter]);
+				camGame.setFilters([filter]);*/
 
 				var lightoverlay:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('airship/grayfg', 'impostor'));
 				lightoverlay.antialiasing = true;
@@ -7334,8 +7336,8 @@ class PlayState extends MusicBeatState
 					if (Math.isNaN(theSpeed))
 						theSpeed = 0;
 
-					if(chromTween != null) chromTween.cancel();
-					chromTween = FlxTween.tween(caShader, {amount: theAmount}, theSpeed, {ease: FlxEase.sineOut});
+					//if(chromTween != null) chromTween.cancel();
+					//chromTween = FlxTween.tween(caShader, {amount: theAmount}, theSpeed, {ease: FlxEase.sineOut});
 				case 'setGlitch':
 					var theAmount:Float = Std.parseFloat(value1);
 					if (Math.isNaN(theAmount))
@@ -10044,11 +10046,12 @@ class PlayState extends MusicBeatState
 					crowd.animation.play('bop');
 				}
 			case 'grey':
+				/*
 				if(curBeat % chromFreq == 0){
 					if(chromTween != null) chromTween.cancel();
 					caShader.amount = chromAmount;
 					chromTween = FlxTween.tween(caShader, {amount: 0}, 0.45, {ease: FlxEase.sineOut});
-				}
+				}*/
 				if (curBeat % 2 == 0)
 				{
 					crowd.animation.play('bop');

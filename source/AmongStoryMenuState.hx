@@ -81,7 +81,7 @@ class AmongStoryMenuState extends MusicBeatState
 	var localFinaleState:FinaleState;
 	var finaleAura:FlxSprite;
 
-	var caShader:ChromaticAbberation;
+	//var caShader:ChromaticAbberation;
 
 	function doTheThing(){
 
@@ -134,13 +134,14 @@ class AmongStoryMenuState extends MusicBeatState
 
 		camSpace.zoom = 0.7;
 
+		/*
 		if(localFinaleState == NOT_PLAYED){
 			caShader = new ChromaticAbberation(0);
 			add(caShader);
 			caShader.amount = 0;
 			var filter2:ShaderFilter = new ShaderFilter(caShader.shader);
 			camSpace.setFilters([filter2]);
-		}
+		}*/
 
 		starsBG = new FlxBackdrop(Paths.image('freeplay/starBG', 'impostor'), 1, 1, true, true);
 		starsBG.setPosition(111.3, 67.95);
@@ -600,7 +601,7 @@ class AmongStoryMenuState extends MusicBeatState
 		var accepted = controls.ACCEPT;
 
 		if(localFinaleState == NOT_PLAYED){
-			caShader.amount = -2 / (FlxMath.distanceToPoint(ship, FlxPoint.get(1505, 0))/100);
+			//caShader.amount = -2 / (FlxMath.distanceToPoint(ship, FlxPoint.get(1505, 0))/100);
 			camSpace.shake(0.5/FlxMath.distanceToPoint(ship, FlxPoint.get(1505, 0))/2, 0.05);
 			camScreen.shake(0.3/FlxMath.distanceToPoint(ship, FlxPoint.get(1505, 0))/2, 0.05);
 
